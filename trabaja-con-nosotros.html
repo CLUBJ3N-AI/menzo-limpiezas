@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trabaja con nosotros | Menzo Limpiezas</title>
+    <meta
+      name="description"
+      content="Envía tu candidatura a Menzo Limpiezas mediante el formulario de empleo."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="jobs-page">
+    <header class="site-header jobs-header">
+      <div class="container header-bar">
+        <a class="brand" href="index.html">
+          <img src="images/66810-OCQAXA-424-copia.jpg" alt="Logo Menzo Limpiezas" class="brand-logo" />
+          <span>Menzo Limpiezas</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Principal">
+          <a href="index.html">Inicio</a>
+          <a href="index.html#multimedia">Multimedia</a>
+          <a href="index.html#resenas">Reseñas</a>
+          <a href="index.html#presupuesto">Presupuesto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="jobs-main">
+      <section class="jobs-hero">
+        <div class="container jobs-form-layout">
+          <div class="jobs-intro">
+            <p class="quote-kicker">Portal de empleo</p>
+            <h1>¿Quieres trabajar con nosotros?</h1>
+            <div class="quote-divider"></div>
+            <h2>Rellena el siguiente formulario</h2>
+            <p>
+              Envíanos tu candidatura y tu CV. Revisaremos tu perfil para próximos procesos de
+              selección en Menzo Limpiezas.
+            </p>
+          </div>
+
+          <form
+            class="quote-form jobs-application-form"
+            action="https://formsubmit.co/menzosl_vlc@hotmail.com"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <input type="hidden" name="_subject" value="Nueva candidatura desde Menzo Limpiezas" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <label for="job-nombre">Nombre <span>*</span></label>
+            <input id="job-nombre" name="name" type="text" required />
+
+            <label for="job-telefono">Teléfono <span>*</span></label>
+            <input id="job-telefono" name="telefono" type="tel" required />
+
+            <label for="job-email">Email <span>*</span></label>
+            <input id="job-email" name="email" type="email" required />
+
+            <label for="job-localidad">Localidad <span>*</span></label>
+            <input id="job-localidad" name="localidad" type="text" required />
+
+            <label for="job-puesto">Puesto solicitado <span>*</span></label>
+            <input id="job-puesto" name="puesto_solicitado" type="text" required />
+
+            <label for="job-cv">Adjunta tu CV <span>*</span></label>
+            <input id="job-cv" name="attachment" type="file" accept=".pdf,.doc,.docx" required />
+
+            <label for="job-experiencia">Háblanos de tu experiencia</label>
+            <textarea id="job-experiencia" name="experiencia" rows="6"></textarea>
+
+            <label class="checkbox-row">
+              <input type="checkbox" required />
+              <span>He leído y acepto la política de privacidad. <strong>*</strong></span>
+            </label>
+
+            <label class="checkbox-row">
+              <input type="checkbox" />
+              <span>Consiento recibir comunicaciones relacionadas con procesos de selección.</span>
+            </label>
+
+            <button class="submit-button" type="submit">Enviar candidatura</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
