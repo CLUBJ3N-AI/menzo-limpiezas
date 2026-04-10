@@ -200,6 +200,19 @@ a {
   will-change: transform;
 }
 
+.hero-image--detail {
+  object-position: 64% center;
+}
+
+.hero-image--van {
+  object-position: 58% center;
+}
+
+.hero-image--window {
+  object-position: 62% center;
+}
+
+
 .hero-video {
   width: 100%;
   height: 100%;
@@ -1517,6 +1530,18 @@ a {
 
   .hero-stage {
     height: 48vh;
+  }
+
+  .hero-image--detail {
+    object-position: 70% center;
+  }
+
+  .hero-image--van {
+    object-position: 68% center;
+  }
+
+  .hero-image--window {
+    object-position: 64% center;
   }
 
   .hero-content-overlay {
