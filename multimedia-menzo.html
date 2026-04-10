@@ -3,18 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Multimedia Menzo | Galería de vídeos e imágenes</title>
+    <title>Multimedia Menzo | Galeria visual de trabajos</title>
     <meta
       name="description"
-      content="Galería multimedia de Menzo Limpiezas con vídeos e imágenes reales de trabajos y servicios."
+      content="Galeria visual de Menzo Limpiezas con trabajos reales en cristales, comunidades, oficinas, domicilios y placas solares."
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="media-page">
     <div class="top-promo-bar">
-      <a href="index.html">
-        Volver a la página principal de Menzo Limpiezas
-      </a>
+      <a href="index.html">Volver a la pagina principal de Menzo Limpiezas</a>
     </div>
 
     <header class="site-header jobs-header">
@@ -36,8 +34,9 @@
 
           <nav class="site-nav" aria-label="Principal">
             <a href="index.html">Inicio</a>
-            <a href="#galeria">Galería</a>
+            <a href="#galeria">Galeria</a>
             <a href="trabaja-con-nosotros.html" target="_blank" rel="noreferrer noopener">Trabaja con nosotros</a>
+            <a href="index.html#resenas">Reseñas</a>
           </nav>
         </div>
       </div>
@@ -47,39 +46,183 @@
       <section class="media-hero">
         <div class="container media-hero-layout">
           <div class="media-copy">
-            <p class="quote-kicker">Menzo y la DANA</p>
-            <h1>Espacio preparado para reunir contenido de apoyo y trabajos con los afectados.</h1>
+            <p class="quote-kicker">Galeria Menzo</p>
+            <h1>Trabajos reales presentados de forma limpia, visual y directa.</h1>
             <div class="quote-divider"></div>
             <p>
-              Aquí iremos añadiendo vídeos e imágenes que me vayas pasando para mostrar el trabajo,
-              la ayuda y las intervenciones de Menzo Limpiezas de una forma clara y ordenada.
+              Hemos reunido una seleccion de servicios reales para que el cliente vea de un vistazo
+              la variedad, el detalle y el resultado final de cada intervencion.
             </p>
-          </div>
-
-          <div class="media-highlight-card">
-            <span class="media-tag">Contenido en preparación</span>
-            <div class="media-empty-state">
-              <strong>Galería lista para nuevos archivos</strong>
-              <p>El vídeo anterior se ha retirado y esta carpeta queda preparada para seguir añadiendo material.</p>
+            <div class="media-filter-pills" aria-label="Tipos de servicio destacados">
+              <span>Cristales</span>
+              <span>Comunidades</span>
+              <span>Oficinas</span>
+              <span>Domicilios</span>
+              <span>Placas solares</span>
             </div>
           </div>
+
+          <article class="media-highlight-card interactive-float-card">
+            <span class="media-tag">Seleccion destacada</span>
+            <div class="media-feature-frame">
+              <img src="images/gallery-office-premium.png" alt="Espacio de oficina impecable tras servicio de limpieza" />
+            </div>
+            <div class="media-feature-copy">
+              <strong>Imagen premium para presentar al cliente</strong>
+              <p>Un formato elegante, visual y facil de recorrer desde movil o escritorio.</p>
+            </div>
+          </article>
         </div>
       </section>
 
       <section class="media-gallery-section">
-        <div class="container media-gallery-grid">
-          <article class="media-gallery-card">
-            <div class="media-card-head">
-              <h2>Próximos contenidos</h2>
-              <span>Galería abierta</span>
+        <div class="container">
+          <div class="media-gallery-head">
+            <div>
+              <p class="quote-kicker">Trabajos recientes</p>
+              <h2>Galeria visual interactiva</h2>
             </div>
             <p>
-              Cuando me vayas adjuntando más vídeos o imágenes, los iré incorporando en esta página
-              con el mismo formato visual para que la galería quede completa y ordenada.
+              Pulsa cualquier imagen para verla ampliada. Las tarjetas tienen un comportamiento
+              suave al pasar el raton para dar una sensacion moderna y cuidada.
             </p>
-          </article>
+          </div>
+
+          <div class="media-gallery-grid media-gallery-grid-rich">
+            <button class="media-shot media-shot-wide" type="button" data-media-src="images/gallery-window-pressure.jpg" data-media-title="Cristales y rejas" data-media-copy="Limpieza tecnica de ventana, cristal y reja con agua a presion.">
+              <img src="images/gallery-window-pressure.jpg" alt="Limpieza de cristal y reja con agua a presion" />
+              <span class="media-shot-overlay">
+                <strong>Cristales y rejas</strong>
+                <small>Detalle tecnico y acabado visible</small>
+              </span>
+            </button>
+
+            <button class="media-shot media-shot-tall" type="button" data-media-src="images/gallery-height-window.jpg" data-media-title="Cristales en altura" data-media-copy="Trabajo en cristal exterior con acceso elevado y limpieza profesional.">
+              <img src="images/gallery-height-window.jpg" alt="Operario limpiando cristal exterior en altura" />
+              <span class="media-shot-overlay">
+                <strong>Cristales en altura</strong>
+                <small>Intervencion exterior</small>
+              </span>
+            </button>
+
+            <button class="media-shot" type="button" data-media-src="images/gallery-team-van.jpg" data-media-title="Equipo y movilidad" data-media-copy="Preparacion de maquinaria y desplazamiento para cada servicio.">
+              <img src="images/gallery-team-van.jpg" alt="Equipo de Menzo junto a la furgoneta de servicio" />
+              <span class="media-shot-overlay">
+                <strong>Equipo y movilidad</strong>
+                <small>Preparacion del servicio</small>
+              </span>
+            </button>
+
+            <button class="media-shot" type="button" data-media-src="images/gallery-lobby-door.jpg" data-media-title="Portales y accesos" data-media-copy="Limpieza de entrada comunitaria con trabajo sobre cristal y carpinteria.">
+              <img src="images/gallery-lobby-door.jpg" alt="Limpieza de portal comunitario" />
+              <span class="media-shot-overlay">
+                <strong>Portales y accesos</strong>
+                <small>Imagen cuidada para comunidades</small>
+              </span>
+            </button>
+
+            <button class="media-shot media-shot-wide" type="button" data-media-src="images/gallery-office-premium.png" data-media-title="Oficinas y espacios premium" data-media-copy="Limpieza de espacios de trabajo representativos con imagen impecable.">
+              <img src="images/gallery-office-premium.png" alt="Oficina limpia y ordenada tras servicio profesional" />
+              <span class="media-shot-overlay">
+                <strong>Oficinas y espacios premium</strong>
+                <small>Presentacion visual para cliente final</small>
+              </span>
+            </button>
+
+            <button class="media-shot media-shot-tall" type="button" data-media-src="images/gallery-home-cleaning.png" data-media-title="Domicilios y viviendas" data-media-copy="Limpieza interior de vivienda con equipos y detalle en cada estancia.">
+              <img src="images/gallery-home-cleaning.png" alt="Limpieza interior en vivienda" />
+              <span class="media-shot-overlay">
+                <strong>Domicilios y viviendas</strong>
+                <small>Acabado integral</small>
+              </span>
+            </button>
+
+            <button class="media-shot" type="button" data-media-src="images/gallery-entry-glass.png" data-media-title="Zaguanes y cristales" data-media-copy="Trabajo de mantenimiento en accesos interiores y cristales de paso.">
+              <img src="images/gallery-entry-glass.png" alt="Limpieza de cristal en acceso interior" />
+              <span class="media-shot-overlay">
+                <strong>Zaguanes y cristales</strong>
+                <small>Detalle y presencia</small>
+              </span>
+            </button>
+
+            <button class="media-shot" type="button" data-media-src="images/gallery-floor-machine.png" data-media-title="Suelos y maquinaria" data-media-copy="Limpieza mecanizada de suelos para recuperar brillo y uniformidad.">
+              <img src="images/gallery-floor-machine.png" alt="Limpieza de suelos con maquinaria profesional" />
+              <span class="media-shot-overlay">
+                <strong>Suelos y maquinaria</strong>
+                <small>Resultado homogéneo</small>
+              </span>
+            </button>
+
+            <button class="media-shot" type="button" data-media-src="images/gallery-solar-cleaning.png" data-media-title="Placas solares" data-media-copy="Limpieza tecnica para conservar rendimiento y presencia.">
+              <img src="images/gallery-solar-cleaning.png" alt="Limpieza de placas solares con cepillo y agua" />
+              <span class="media-shot-overlay">
+                <strong>Placas solares</strong>
+                <small>Mantenimiento tecnico</small>
+              </span>
+            </button>
+
+            <button class="media-shot" type="button" data-media-src="images/gallery-pressure-washing.png" data-media-title="Hidrolimpiadora" data-media-copy="Limpieza exterior de superficies y muros con presion controlada.">
+              <img src="images/gallery-pressure-washing.png" alt="Limpieza exterior con hidrolimpiadora" />
+              <span class="media-shot-overlay">
+                <strong>Hidrolimpiadora</strong>
+                <small>Exterior y pavimentos</small>
+              </span>
+            </button>
+          </div>
         </div>
       </section>
     </main>
+
+    <dialog class="media-lightbox" id="media-lightbox" aria-label="Vista ampliada de la galeria">
+      <form method="dialog" class="media-lightbox-shell">
+        <button class="media-lightbox-close" type="submit" aria-label="Cerrar galeria ampliada">×</button>
+        <div class="media-lightbox-layout">
+          <img id="media-lightbox-image" src="" alt="" />
+          <div class="media-lightbox-copy">
+            <p class="quote-kicker">Vista ampliada</p>
+            <h2 id="media-lightbox-title"></h2>
+            <p id="media-lightbox-text"></p>
+          </div>
+        </div>
+      </form>
+    </dialog>
+
+    <script>
+      const mediaCards = Array.from(document.querySelectorAll(".media-shot"));
+      const mediaLightbox = document.getElementById("media-lightbox");
+      const mediaLightboxImage = document.getElementById("media-lightbox-image");
+      const mediaLightboxTitle = document.getElementById("media-lightbox-title");
+      const mediaLightboxText = document.getElementById("media-lightbox-text");
+
+      mediaCards.forEach((card) => {
+        card.addEventListener("pointermove", (event) => {
+          const bounds = card.getBoundingClientRect();
+          const x = event.clientX - bounds.left;
+          const y = event.clientY - bounds.top;
+          const offsetX = (x / bounds.width - 0.5) * 10;
+          const offsetY = (y / bounds.height - 0.5) * 12;
+
+          card.style.transform = `translateY(-8px) rotateX(${-offsetY * 0.35}deg) rotateY(${offsetX * 0.45}deg)`;
+        });
+
+        card.addEventListener("pointerleave", () => {
+          card.style.transform = "";
+        });
+
+        card.addEventListener("click", () => {
+          mediaLightboxImage.src = card.dataset.mediaSrc;
+          mediaLightboxImage.alt = card.querySelector("img")?.alt || "";
+          mediaLightboxTitle.textContent = card.dataset.mediaTitle || "";
+          mediaLightboxText.textContent = card.dataset.mediaCopy || "";
+          mediaLightbox.showModal();
+        });
+      });
+
+      mediaLightbox?.addEventListener("click", (event) => {
+        if (event.target === mediaLightbox) {
+          mediaLightbox.close();
+        }
+      });
+    </script>
   </body>
 </html>
