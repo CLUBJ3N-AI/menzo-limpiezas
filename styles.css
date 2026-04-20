@@ -1010,14 +1010,21 @@ a {
   height: 2.8rem;
   border-radius: 50%;
   flex-shrink: 0;
-  background: #d1e8ff;
+  background: #c2824a;
   display: flex !important;
   align-items: center;
   justify-content: center;
-  font-weight: 800;
-  font-size: 1.1rem;
-  color: #1c77c3;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #fff;
   overflow: hidden;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+.review-card--google .review-card-avatar::after {
+  content: "LT";
+  display: block;
+  position: absolute;
 }
 .review-card--google .review-card-avatar img {
   width: 100%;
@@ -1025,6 +1032,8 @@ a {
   object-fit: cover;
   border-radius: 50%;
   display: block;
+  position: relative;
+  z-index: 1;
 }
 .review-card--google .review-card-author-info {
   display: flex !important;
