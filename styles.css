@@ -1056,7 +1056,30 @@ a {
   font-size: 0.75rem;
   color: #a0aec0;
 }
-.review-card--google span { display: none; }
+.review-card--google .review-card-author-name,
+.review-card--google .review-card-author-sub,
+.review-card--google .review-card-stars,
+.review-card--google .review-card-date {
+  display: inline;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: normal;
+  text-transform: none;
+  margin-bottom: 0;
+  text-transform: none;
+}
+.review-card--google .review-card-author-name::before,
+.review-card--google .review-card-author-name::after,
+.review-card--google .review-card-author-sub::before,
+.review-card--google .review-card-author-sub::after,
+.review-card--google .review-card-stars::before,
+.review-card--google .review-card-stars::after,
+.review-card--google .review-card-date::before,
+.review-card--google .review-card-date::after {
+  display: none !important;
+  content: none !important;
+}
 
 .reviews-carousel-shell {
   position: relative;
