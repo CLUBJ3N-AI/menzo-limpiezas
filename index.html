@@ -43,20 +43,45 @@
           <nav class="site-nav" aria-label="Principal">
             <a href="#inicio">Inicio</a>
             <a href="multimedia-menzo.html">Multimedia</a>
-            <a href="trabaja-con-nosotros.html" target="_blank" rel="noreferrer noopener">Trabaja con nosotros</a>
+            <a href="trabaja-con-nosotros.html">Trabaja con nosotros</a>
             <a href="#resenas">Reseñas</a>
             <a href="#presupuesto">Presupuesto</a>
+            <button class="nav-modal-btn" id="sobre-nosotros-btn" type="button">Sobre nosotros</button>
           </nav>
         </div>
       </div>
     </header>
+
+    <!-- Modal Sobre nosotros -->
+    <div class="modal-overlay" id="sobre-modal" role="dialog" aria-modal="true" aria-label="Sobre nosotros">
+      <div class="modal-panel">
+        <button class="modal-close" id="modal-close-btn" aria-label="Cerrar">&times;</button>
+        <div class="modal-body">
+          <div class="modal-logo-col">
+            <img src="images/logo-menzo-interactivo.jpg" alt="Logo Menzo Limpiezas" class="modal-logo" />
+          </div>
+          <div class="modal-text-col">
+            <p class="modal-kicker">Sobre nosotros</p>
+            <h2>Menzo Limpiezas</h2>
+            <div class="modal-divider"></div>
+            <p>Somos una empresa de limpieza profesional con sede en Xàtiva, Valencia. Nacimos con el objetivo de ofrecer servicios de alta calidad tanto a particulares como a empresas, comunidades y espacios técnicos.</p>
+            <p>Contamos con un equipo comprometido, maquinaria especializada y productos certificados con el sello EU Ecolabel, garantizando resultados impecables con el mínimo impacto ambiental.</p>
+            <p>Trabajamos en cristales en altura, cocinas industriales, pavimentos, domicilios, comunidades, escaparates, finales de obra y mucho más.</p>
+            <div class="modal-contact-row">
+              <a href="https://wa.me/34622527426" target="_blank" rel="noreferrer noopener" class="modal-cta">WhatsApp</a>
+              <a href="mailto:menzosl_vlc@hotmail.com" class="modal-cta modal-cta--outline">Correo electrónico</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <main>
       <section class="hero" id="inicio">
         <div class="hero-stage" id="hero-stage">
           <div class="hero-content-overlay">
             <p class="hero-kicker">Menzo Limpiezas en Xàtiva</p>
-            <h1>Solvencia y excelencia en nuestro servicio</h1>
+            <h1>Profesionalidad certificada y excelencia en nuestro servicio</h1>
             <div class="hero-divider"></div>
             <p class="hero-text">
               Empresa especializada en servicios de limpieza y mantenimiento con alta calidad
@@ -144,9 +169,9 @@
             <p class="google-review-quote">
               “Muy profesionales, puntuales y con resultados impecables. Totalmente recomendables.”
             </p>
-            <div class="google-review-rating" aria-label="Valoración 4,9 sobre 5">
+            <div class="google-review-rating" aria-label="Valoración 5 sobre 5">
               <span>★★★★★</span>
-              <strong>4,9 / 5</strong>
+              <strong>5 / 5</strong>
             </div>
             <p class="google-review-meta">
               Basado en 85 valoraciones públicas asociadas a Google Business.
@@ -185,7 +210,7 @@
             </div>
           </article>
 
-          <article class="showcase-item reverse">
+          <article class="showcase-item">
             <div class="showcase-image">
               <img src="https://menzolimpieza.wordpress.com/wp-content/uploads/2026/01/limpieza-cocinas-industriales-4-1.png?w=819" alt="Limpieza de cocinas industriales" />
             </div>
@@ -207,7 +232,7 @@
               <img src="https://menzolimpieza.wordpress.com/wp-content/uploads/2026/01/limpieza-con-fregadora-industrial-1.png?w=819" alt="Limpieza de pavimentos con fregadora industrial" />
             </div>
             <div class="showcase-copy">
-              <h2>Pavimentos con fregadora industrial</h2>
+              <h2>Pavimentos con fregadora rotativa industrial</h2>
               <p>
                 Eliminamos suciedad difícil y restos persistentes en suelos de naves, locales,
                 comunidades y espacios comerciales.
@@ -219,7 +244,7 @@
             </div>
           </article>
 
-          <article class="showcase-item reverse">
+          <article class="showcase-item">
             <div class="showcase-image">
               <img src="https://menzolimpieza.wordpress.com/wp-content/uploads/2026/01/limpieza-con-hidrolimpiadora-1.png?w=819" alt="Limpieza con hidrolimpiadora" />
             </div>
@@ -253,7 +278,7 @@
             </div>
           </article>
 
-          <article class="showcase-item reverse">
+          <article class="showcase-item">
             <div class="showcase-image">
               <img src="https://menzolimpieza.wordpress.com/wp-content/uploads/2026/01/mantenimiento-de-comunidades.png?w=819" alt="Mantenimiento de comunidades" />
             </div>
@@ -287,12 +312,12 @@
             </div>
           </article>
 
-          <article class="showcase-item reverse">
+          <article class="showcase-item">
             <div class="showcase-image">
               <img src="https://menzolimpieza.wordpress.com/wp-content/uploads/2026/01/mantenimiento-de-final-deobra.png?w=819" alt="Limpieza de finales de obra" />
             </div>
             <div class="showcase-copy">
-              <h2>Finales de obra</h2>
+              <h2>Limpieza integral de final de obra</h2>
               <p>
                 Eliminación de polvo, restos de materiales y suciedad de reforma para entregar el
                 espacio listo, limpio y presentable.
@@ -303,21 +328,76 @@
               </div>
             </div>
           </article>
+
+          <article class="showcase-item">
+            <div class="showcase-image">
+              <img src="images/osmotizada.PNG" alt="Limpieza con agua osmotizada de cristales y fachadas" />
+            </div>
+            <div class="showcase-copy">
+              <h2>Limpieza con agua osmotizada de cristales y fachadas</h2>
+              <p>
+                Tecnología de ósmosis inversa para cristales y fachadas sin cal, sin marcas y sin
+                productos químicos, con un acabado perfecto y duradero.
+              </p>
+              <div class="review-card">
+                <span>Google · 5/5 · Norberto Lagardera</span>
+                <p>"Limpieza espectacular!! Muy contento de encontrar a gente tan profesional! Limpieza de cristales, cocina, carpa!!!"</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="showcase-item">
+            <div class="showcase-image">
+              <img src="images/MANTENIMIENTO DE OFICINAS (1).png" alt="Mantenimiento de oficinas" />
+            </div>
+            <div class="showcase-copy">
+              <h2>Mantenimiento de oficinas</h2>
+              <p>
+                Limpieza regular y profunda de espacios de trabajo para mantener un entorno
+                higiénico, ordenado y representativo para empleados y clientes.
+              </p>
+              <div class="review-card">
+                <span>Google · 5/5 · Inmobiliaria G. X.</span>
+                <p>"Puntualidad, adaptación a horarios y satisfacción continuada con el mantenimiento del local."</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="partners-section" aria-label="Colaboradores y certificaciones">
+        <div class="container partners-head">
+          <p class="partners-kicker">Colaboradores y certificaciones</p>
+        </div>
+        <div class="partners-track-wrap">
+          <div class="partners-track">
+            <div class="partner-item"><img src="images/logo-xativa.jpg" alt="Ayuntamiento de Xàtiva" /></div>
+            <div class="partner-item"><img src="images/logo-adexa.png" alt="ADEXA Xàtiva" /></div>
+            <div class="partner-item"><img src="images/logo-afelin.png" alt="Afelín" /></div>
+            <div class="partner-item"><img src="images/logo-generalitat.svg" alt="Generalitat Valenciana" /></div>
+            <div class="partner-item"><img src="images/logo-unger.png" alt="Unger" /></div>
+            <div class="partner-item"><img src="images/logo-moerman.svg" alt="Moerman" /></div>
+            <div class="partner-item"><img src="images/logo-ecolabel.png" alt="EU Ecolabel" /></div>
+            <div class="partner-item"><img src="images/logo-karcher.png" alt="Kärcher" /></div>
+            <div class="partner-item" aria-hidden="true"><img src="images/logo-xativa.jpg" alt="" /></div>
+            <div class="partner-item" aria-hidden="true"><img src="images/logo-adexa.png" alt="" /></div>
+            <div class="partner-item" aria-hidden="true"><img src="images/logo-afelin.png" alt="" /></div>
+            <div class="partner-item" aria-hidden="true"><img src="images/logo-generalitat.svg" alt="" /></div>
+            <div class="partner-item" aria-hidden="true"><img src="images/logo-unger.png" alt="" /></div>
+            <div class="partner-item" aria-hidden="true"><img src="images/logo-moerman.svg" alt="" /></div>
+            <div class="partner-item" aria-hidden="true"><img src="images/logo-ecolabel.png" alt="" /></div>
+            <div class="partner-item" aria-hidden="true"><img src="images/logo-karcher.png" alt="" /></div>
+          </div>
         </div>
       </section>
 
       <section class="verified-reviews-section" id="resenas">
         <div class="container">
           <div class="verified-reviews-head">
-            <p class="quote-kicker">Reseñas favorables</p>
-            <div class="verified-reviews-top">
+<div class="verified-reviews-top">
               <div>
                 <h2>Reseñas</h2>
-                <p class="verified-reviews-proof">
-                  Reseñas públicas verificables de clientes reales de Menzo Limpiezas visibles en
-                  Google.
-                </p>
-              </div>
+                </div>
               <a
                 class="reviews-cta-button"
                 href="https://www.google.com/search?q=Menzo+Limpiezas+X%C3%A0tiva+rese%C3%B1as"
@@ -327,160 +407,147 @@
                 Ver reseñas de Google
               </a>
             </div>
-            <p>
-              Hemos reunido en este módulo una selección de opiniones favorables visibles en fuentes
-              públicas para reforzar la confianza antes de contactar.
-            </p>
+          <div class="reviews-carousel-shell">
+            <button class="reviews-carousel-btn reviews-carousel-prev" id="reviews-prev" type="button" aria-label="Reseña anterior">&#8592;</button>
+            <div class="reviews-carousel-viewport">
+              <div class="verified-reviews-grid" id="reviews-track">
+                <article class="verified-review-card">
+                  <div class="verified-review-top">
+                    <span class="verified-review-badge">Google</span>
+                    <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
+                  </div>
+                  <div class="verified-review-meta">
+                    <h3>Jesús R. - Tiaki Viajes</h3>
+                    <span>hace 1 mes</span>
+                  </div>
+                  <p>Excelente servicio. Contraté a Menzo Limpiezas para una limpieza integral de cristales y el resultado fue impecable. Puntuales, profesionales, muy cuidadosos con los detalles y con un trato cercano y amable. Dejaron los vidrios perfectos, sin marcas ni restos, utilizando productos de calidad. Muy buena relación calidad-precio. Sin duda, los volveré a contratar y los recomiendo al 100%.</p>
+                </article>
+
+                <article class="verified-review-card">
+                  <div class="verified-review-top">
+                    <span class="verified-review-badge">Google</span>
+                    <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
+                  </div>
+                  <div class="verified-review-meta">
+                    <h3>César Meiide</h3>
+                    <span>hace 6 meses</span>
+                  </div>
+                  <p>Estoy muy satisfecho con el servicio. Desde que he contactado con ellos la experiencia ha sido muy buena. Han resuelto mis dudas, me han dado un presupuesto muy equilibrado y el resultado de la limpieza de mi piso ha sido excelente. Se nota la profesionalidad y dedicación. Muchas gracias y os deseo mucha suerte.</p>
+                </article>
+
+                <article class="verified-review-card">
+                  <div class="verified-review-top">
+                    <span class="verified-review-badge">Google</span>
+                    <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
+                  </div>
+                  <div class="verified-review-meta">
+                    <h3>raulet46</h3>
+                    <span>hace 1 año</span>
+                  </div>
+                  <p>Les llamé y enseguida me dieron una fecha para hacer una primera valoración del trabajo a realizar y después me pasaron un presupuesto que acepté sin dudarlo. La limpieza se realizó dentro del tiempo estimado y quedó perfecta. Incluso olía todo muy bien de lo limpio que quedó; dejó fotos del antes y del después, sin dudarlo repetiré con ellos.</p>
+                </article>
+
+                <article class="verified-review-card">
+                  <div class="verified-review-top">
+                    <span class="verified-review-badge">Google</span>
+                    <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
+                  </div>
+                  <div class="verified-review-meta">
+                    <h3>Veronica Leon Marzal</h3>
+                    <span>hace 9 meses</span>
+                  </div>
+                  <p>Totalmente recomendables. Me hicieron presupuesto sin compromiso de forma muy rápida. Contraté los servicios para una limpieza integral de una caseta de campo. El resultado ha sido impecable. Muy profesionales. Muchísimas gracias por vuestra disponibilidad, puntualidad y trabajo realizado. Sin duda nos volveremos a ver.</p>
+                </article>
+
+                <article class="verified-review-card">
+                  <div class="verified-review-top">
+                    <span class="verified-review-badge">Google</span>
+                    <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
+                  </div>
+                  <div class="verified-review-meta">
+                    <h3>Juan Carlos Bertomeu Soto</h3>
+                    <span>hace 8 meses</span>
+                  </div>
+                  <p>Con toda franqueza, no puedo estar más satisfecho. Una manera de trabajar impecable, minuciosa, con atención al detalle y con el tratamiento adecuado para cada tipo de superficie. Verdaderas profesionales, desde el minuto uno sientes que estás en las mejores manos. En menos de media mañana mi casa respiraba de nuevo.</p>
+                </article>
+
+                <article class="verified-review-card">
+                  <div class="verified-review-top">
+                    <span class="verified-review-badge">Google</span>
+                    <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
+                  </div>
+                  <div class="verified-review-meta">
+                    <h3>Fabric Tela Fallera</h3>
+                    <span>hace 10 meses</span>
+                  </div>
+                  <p>Un servicio excelente, la tienda está super limpia, se nota la dedicación y el esfuerzo que le ponen, muy recomendables.</p>
+                </article>
+
+                <article class="verified-review-card">
+                  <div class="verified-review-top">
+                    <span class="verified-review-badge">Google</span>
+                    <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
+                  </div>
+                  <div class="verified-review-meta">
+                    <h3>Norberto Lagardera</h3>
+                    <span>hace 1 año</span>
+                  </div>
+                  <p>Limpieza espectacular!! Muy contento de encontrar a gente tan profesional! Limpieza de cristales, cocina, carpa!!!</p>
+                </article>
+
+                <article class="verified-review-card">
+                  <div class="verified-review-top">
+                    <span class="verified-review-badge">Google</span>
+                    <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
+                  </div>
+                  <div class="verified-review-meta">
+                    <h3>Mari C. B. M.</h3>
+                    <span>reseña pública verificada</span>
+                  </div>
+                  <p>Valora especialmente el servicio de tapicería, la atención recibida y el cambio conseguido en una pieza que daba por perdida.</p>
+                </article>
+
+                <article class="verified-review-card">
+                  <div class="verified-review-top">
+                    <span class="verified-review-badge">Google</span>
+                    <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
+                  </div>
+                  <div class="verified-review-meta">
+                    <h3>Inmobiliaria G. X.</h3>
+                    <span>reseña pública verificada</span>
+                  </div>
+                  <p>Señala la puntualidad, la adaptación a horarios y la satisfacción continuada con el mantenimiento del local.</p>
+                </article>
+
+                <article class="verified-review-card">
+                  <div class="verified-review-top">
+                    <span class="verified-review-badge">Google</span>
+                    <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
+                  </div>
+                  <div class="verified-review-meta">
+                    <h3>Mantenimiento de oficinas</h3>
+                    <span>reseña pública verificada</span>
+                  </div>
+                  <p></p>
+                </article>
+
+                <article class="verified-review-card">
+                  <div class="verified-review-top">
+                    <span class="verified-review-badge">Google</span>
+                    <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
+                  </div>
+                  <div class="verified-review-meta">
+                    <h3>Limpieza con pértiga de agua osmotizada inversa</h3>
+                    <span>reseña pública verificada</span>
+                  </div>
+                  <p></p>
+                </article>
+              </div>
+            </div>
+            <button class="reviews-carousel-btn reviews-carousel-next" id="reviews-next" type="button" aria-label="Siguiente reseña">&#8594;</button>
           </div>
 
-          <div class="verified-reviews-grid">
-            <article class="verified-review-card">
-              <div class="verified-review-top">
-                <span class="verified-review-badge">Google</span>
-                <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
-              </div>
-              <div class="verified-review-meta">
-                <h3>Jesús R. - Tiaki Viajes</h3>
-                <span>a month ago</span>
-              </div>
-              <p>
-                Excelente servicio. Contraté a Menzo Limpiezas para una limpieza integral de
-                cristales y el resultado fue impecable. Puntuales, profesionales, muy cuidadosos
-                con los detalles y con un trato cercano y amable. Dejaron los vidrios perfectos,
-                sin marcas ni restos, utilizando productos de calidad. Muy buena relación
-                calidad-precio. Sin duda, los volveré a contratar y los recomiendo al 100%.
-              </p>
-            </article>
-
-            <article class="verified-review-card">
-              <div class="verified-review-top">
-                <span class="verified-review-badge">Google</span>
-                <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
-              </div>
-              <div class="verified-review-meta">
-                <h3>César Meiide</h3>
-                <span>6 months ago</span>
-              </div>
-              <p>
-                Estoy muy satisfecho con el servicio. Desde que he contactado con ellos la
-                experiencia ha sido muy buena. Han resuelto mis dudas, me han dado un presupuesto
-                muy equilibrado y el resultado de la limpieza de mi piso ha sido excelente. Se nota
-                la profesionalidad y dedicación. Muchas gracias y os deseo mucha suerte.
-              </p>
-            </article>
-
-            <article class="verified-review-card">
-              <div class="verified-review-top">
-                <span class="verified-review-badge">Google</span>
-                <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
-              </div>
-              <div class="verified-review-meta">
-                <h3>raulet46</h3>
-                <span>a year ago</span>
-              </div>
-              <p>
-                Les llamé y enseguida me dieron una fecha para hacer una primera valoración del
-                trabajo a realizar y después me pasaron un presupuesto que acepté sin dudarlo. La
-                limpieza se realizó dentro del tiempo estimado y quedó perfecta. Incluso olía todo
-                muy bien de lo limpio que quedó; dejó fotos del antes y del después, sin dudarlo
-                repetiré con ellos.
-              </p>
-            </article>
-
-            <article class="verified-review-card">
-              <div class="verified-review-top">
-                <span class="verified-review-badge">Google</span>
-                <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
-              </div>
-              <div class="verified-review-meta">
-                <h3>veronica leon marzal</h3>
-                <span>9 months ago</span>
-              </div>
-              <p>
-                Totalmente recomendables. Me hicieron presupuesto sin compromiso de forma muy
-                rápida. Contraté los servicios para una limpieza integral de una caseta de campo.
-                El resultado ha sido impecable. Muy profesionales. Muchísimas gracias por vuestra
-                disponibilidad, puntualidad y trabajo realizado. Sin duda nos volveremos a ver.
-              </p>
-            </article>
-
-            <article class="verified-review-card">
-              <div class="verified-review-top">
-                <span class="verified-review-badge">Google</span>
-                <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
-              </div>
-              <div class="verified-review-meta">
-                <h3>Juan Carlos Bertomeu Soto</h3>
-                <span>8 months ago</span>
-              </div>
-              <p>
-                Con toda franqueza, no puedo estar más satisfecho. Una manera de trabajar
-                impecable, minuciosa, con atención al detalle y con el tratamiento adecuado para
-                cada tipo de superficie. Verdaderas profesionales, desde el minuto uno sientes que
-                estás en las mejores manos. En menos de media mañana mi casa respiraba de nuevo.
-              </p>
-            </article>
-
-            <article class="verified-review-card">
-              <div class="verified-review-top">
-                <span class="verified-review-badge">Google</span>
-                <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
-              </div>
-              <div class="verified-review-meta">
-                <h3>Fabric Tela Fallera</h3>
-                <span>10 months ago</span>
-              </div>
-              <p>
-                Un servicio excelente, la tienda está super limpia, se nota la dedicación y el
-                esfuerzo que le ponen, muy recomendables.
-              </p>
-            </article>
-
-            <article class="verified-review-card">
-              <div class="verified-review-top">
-                <span class="verified-review-badge">Google</span>
-                <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
-              </div>
-              <div class="verified-review-meta">
-                <h3>Norberto Lagardera</h3>
-                <span>a year ago</span>
-              </div>
-              <p>
-                Limpieza espectacular!! Muy contento de encontrar a gente tan profesional! Limpieza
-                de cristales, cocina, carpa!!!
-              </p>
-            </article>
-
-            <article class="verified-review-card">
-              <div class="verified-review-top">
-                <span class="verified-review-badge">Google</span>
-                <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
-              </div>
-              <div class="verified-review-meta">
-                <h3>Mari C. B. M.</h3>
-                <span>reseña pública verificada</span>
-              </div>
-              <p>
-                Valora especialmente el servicio de tapicería, la atención recibida y el cambio
-                conseguido en una pieza que daba por perdida.
-              </p>
-            </article>
-
-            <article class="verified-review-card">
-              <div class="verified-review-top">
-                <span class="verified-review-badge">Google</span>
-                <span class="verified-review-stars">★★★★★ <strong>5/5</strong></span>
-              </div>
-              <div class="verified-review-meta">
-                <h3>Inmobiliaria G. X.</h3>
-                <span>reseña pública verificada</span>
-              </div>
-              <p>
-                Señala la puntualidad, la adaptación a horarios y la satisfacción continuada con el
-                mantenimiento del local.
-              </p>
-            </article>
-          </div>
+          <div class="reviews-carousel-dots" id="reviews-dots"></div>
         </div>
       </section>
 
@@ -579,7 +646,7 @@
             <div class="footer-column">
               <h3>Servicios</h3>
               <a href="multimedia-menzo.html">Multimedia</a>
-              <a href="trabaja-con-nosotros.html" target="_blank" rel="noreferrer noopener">Trabaja con nosotros</a>
+              <a href="trabaja-con-nosotros.html">Trabaja con nosotros</a>
               <a href="#resenas">Reseñas</a>
               <a href="mailto:menzosl_vlc@hotmail.com">Correo</a>
               <a href="https://instagram.com/menzo_limpiezas" target="_blank" rel="noreferrer noopener">Instagram</a>
@@ -784,6 +851,122 @@
       requestAnimationFrame(animateBackgroundPointer);
 
       setInterval(nextHeroSlide, 7000);
+
+      // --- Carrusel de reseñas ---
+      (function () {
+        const track = document.getElementById("reviews-track");
+        const prevBtn = document.getElementById("reviews-prev");
+        const nextBtn = document.getElementById("reviews-next");
+        const dotsContainer = document.getElementById("reviews-dots");
+
+        if (!track) return;
+
+        const cards = Array.from(track.children);
+        let visibleCount = window.innerWidth <= 640 ? 1 : window.innerWidth <= 900 ? 2 : 3;
+        let currentIndex = 0;
+        let autoplayTimer;
+
+        function getCardWidth() {
+          const gap = parseFloat(getComputedStyle(track).gap) || 19.2;
+          return cards[0].getBoundingClientRect().width + gap;
+        }
+
+        function maxIndex() {
+          return Math.max(0, cards.length - visibleCount);
+        }
+
+        function buildDots() {
+          dotsContainer.innerHTML = "";
+          const total = maxIndex() + 1;
+          for (let i = 0; i < total; i++) {
+            const dot = document.createElement("button");
+            dot.className = "reviews-carousel-dot" + (i === currentIndex ? " is-active" : "");
+            dot.setAttribute("aria-label", "Ir a reseña " + (i + 1));
+            dot.addEventListener("click", () => goTo(i));
+            dotsContainer.appendChild(dot);
+          }
+        }
+
+        function updateDots() {
+          Array.from(dotsContainer.children).forEach((dot, i) => {
+            dot.classList.toggle("is-active", i === currentIndex);
+          });
+        }
+
+        function goTo(index) {
+          currentIndex = Math.max(0, Math.min(index, maxIndex()));
+          track.style.transform = "translateX(-" + (currentIndex * getCardWidth()) + "px)";
+          updateDots();
+        }
+
+        function next() { goTo(currentIndex < maxIndex() ? currentIndex + 1 : 0); }
+        function prev() { goTo(currentIndex > 0 ? currentIndex - 1 : maxIndex()); }
+
+        prevBtn.addEventListener("click", () => { resetAutoplay(); prev(); });
+        nextBtn.addEventListener("click", () => { resetAutoplay(); next(); });
+
+        function resetAutoplay() {
+          clearInterval(autoplayTimer);
+          autoplayTimer = setInterval(next, 5500);
+        }
+
+        // Swipe táctil
+        let swipeStartX = 0;
+        track.addEventListener("pointerdown", (e) => { swipeStartX = e.clientX; });
+        track.addEventListener("pointerup", (e) => {
+          const delta = e.clientX - swipeStartX;
+          if (delta < -45) { resetAutoplay(); next(); }
+          else if (delta > 45) { resetAutoplay(); prev(); }
+        });
+
+        // Responsive resize
+        window.addEventListener("resize", () => {
+          const newVisible = window.innerWidth <= 640 ? 1 : window.innerWidth <= 900 ? 2 : 3;
+          if (newVisible !== visibleCount) {
+            visibleCount = newVisible;
+            cards.forEach(c => {
+              c.style.flex = "0 0 calc(" + (100 / visibleCount) + "% - " + ((visibleCount - 1) * 1.2 / visibleCount) + "rem)";
+            });
+            currentIndex = Math.min(currentIndex, maxIndex());
+            buildDots();
+            goTo(currentIndex);
+          }
+        });
+
+        // Inicializar anchos de tarjeta (87% del viewport entre visibleCount → peek en laterales)
+        cards.forEach(c => {
+          c.style.flex = "0 0 calc(" + (100 / visibleCount) + "% - " + ((visibleCount - 1) * 1.2 / visibleCount) + "rem)";
+        });
+
+        buildDots();
+        resetAutoplay();
+      })();
+
+      // --- Modal Sobre nosotros ---
+      (function () {
+        const modal = document.getElementById("sobre-modal");
+        const openBtn = document.getElementById("sobre-nosotros-btn");
+        const closeBtn = document.getElementById("modal-close-btn");
+
+        function openModal() {
+          modal.classList.add("is-open");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+          modal.classList.remove("is-open");
+          document.body.style.overflow = "";
+        }
+
+        openBtn.addEventListener("click", openModal);
+        closeBtn.addEventListener("click", closeModal);
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) closeModal();
+        });
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") closeModal();
+        });
+      })();
     </script>
   </body>
 </html>
