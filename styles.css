@@ -1009,6 +1009,10 @@ a {
   background: #1a73e8 !important;
 }
 .review-card--google .review-card-avatar--n::after { content: "N" !important; }
+.review-card--google .review-card-avatar--e {
+  background: #e84d3d !important;
+}
+.review-card--google .review-card-avatar--e::after { content: "E" !important; }
 .review-card--google .review-card-avatar {
   width: 2.8rem;
   height: 2.8rem;
