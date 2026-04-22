@@ -1005,6 +1005,10 @@ a {
   position: relative;
   z-index: 1;
 }
+.review-card--google .review-card-avatar--n {
+  background: #1a73e8 !important;
+}
+.review-card--google .review-card-avatar--n::after { content: "N" !important; }
 .review-card--google .review-card-avatar {
   width: 2.8rem;
   height: 2.8rem;
