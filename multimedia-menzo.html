@@ -22,6 +22,10 @@
           <span>Menzo S.L.</span>
         </a>
 
+        <button class="nav-hamburger" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
         <div class="header-right">
           <div class="header-socials" aria-label="Redes y contacto">
             <a href="https://instagram.com/menzo_limpiezas" target="_blank" rel="noreferrer noopener" aria-label="Instagram">
@@ -329,6 +333,29 @@
           mediaLightbox.close();
         }
       });
+    </script>
+
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const header = document.querySelector(".site-header");
+      if (navToggle && header) {
+        navToggle.addEventListener("click", () => {
+          const open = header.classList.toggle("nav-open");
+          navToggle.setAttribute("aria-expanded", open);
+        });
+        document.querySelectorAll(".site-nav a").forEach(link => {
+          link.addEventListener("click", () => {
+            header.classList.remove("nav-open");
+            navToggle.setAttribute("aria-expanded", "false");
+          });
+        });
+        document.addEventListener("click", (e) => {
+          if (!header.contains(e.target)) {
+            header.classList.remove("nav-open");
+            navToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
     </script>
   </body>
 </html>

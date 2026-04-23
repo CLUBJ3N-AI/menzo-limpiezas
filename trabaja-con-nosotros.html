@@ -18,6 +18,10 @@
           <span>Menzo Limpiezas</span>
         </a>
 
+        <button class="nav-hamburger" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+
         <nav class="site-nav" aria-label="Principal">
           <a href="index.html">Inicio</a>
           <a href="index.html#multimedia">Multimedia</a>
@@ -87,5 +91,28 @@
         </div>
       </section>
     </main>
+
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const header = document.querySelector(".site-header");
+      if (navToggle && header) {
+        navToggle.addEventListener("click", () => {
+          const open = header.classList.toggle("nav-open");
+          navToggle.setAttribute("aria-expanded", open);
+        });
+        document.querySelectorAll(".site-nav a, .site-nav button").forEach(link => {
+          link.addEventListener("click", () => {
+            header.classList.remove("nav-open");
+            navToggle.setAttribute("aria-expanded", "false");
+          });
+        });
+        document.addEventListener("click", (e) => {
+          if (!header.contains(e.target)) {
+            header.classList.remove("nav-open");
+            navToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+    </script>
   </body>
 </html>
