@@ -1483,7 +1483,7 @@ a {
 }
 
 .media-gallery-grid-rich {
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   align-items: stretch;
 }
 .media-section-block {
@@ -1515,7 +1515,8 @@ a {
 
 .media-shot {
   position: relative;
-  grid-column: span 4;
+  grid-column: span 1;
+  height: 260px;
   min-height: 300px;
   padding: 0;
   border: 0;
@@ -1578,12 +1579,12 @@ a {
 }
 
 .media-shot-wide {
-  grid-column: span 8;
+  grid-column: span 1;
 }
 
 .media-shot-tall {
-  grid-column: span 4;
-  grid-row: span 2;
+  grid-column: span 1;
+  grid-row: span 1;
   min-height: 620px;
 }
 
