@@ -1410,20 +1410,30 @@ a {
   margin-top: 1.5rem;
 }
 
-.media-filter-pills span {
+.media-filter-pills span,
+.media-filter-pills a {
   display: inline-flex;
   align-items: center;
   min-height: 40px;
-  padding: 0.65rem 1rem;
+  padding: 0.65rem 1.2rem;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(31, 162, 235, 0.14);
-  color: var(--text);
+  background: rgba(255, 255, 255, 0.85);
+  border: 1.5px solid rgba(31, 162, 235, 0.25);
+  color: #102131;
   font-size: 0.84rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   backdrop-filter: blur(10px);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.15s;
+}
+.media-filter-pills a:hover {
+  background: #1fa2eb;
+  color: #fff;
+  border-color: #1fa2eb;
+  transform: translateY(-2px);
 }
 
 .media-feature-frame {
