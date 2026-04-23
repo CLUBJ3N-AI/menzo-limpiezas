@@ -1046,6 +1046,9 @@ a {
 .review-card--google .review-card-avatar--dt {
   background: #e84d3d !important;
 }
+.review-card--google .review-card-avatar--ll {
+  background: #f4a024 !important;
+}
 .review-card--google .review-card-avatar img {
   width: 100%;
   height: 100%;
