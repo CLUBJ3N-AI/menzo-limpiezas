@@ -1499,8 +1499,6 @@ a {
 }
 .media-hero-visual {
   position: relative;
-  perspective: 900px;
-  transform-style: preserve-3d;
 }
 .media-hero-image {
   position: relative;

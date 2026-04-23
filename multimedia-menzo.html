@@ -260,11 +260,12 @@
       const heroVisual = document.getElementById("heroVisual");
       if (heroVisual) {
         const heroImg = heroVisual.querySelector(".media-hero-image");
+        heroImg.style.transition = "transform 0.12s ease-out";
         heroVisual.addEventListener("pointermove", (e) => {
           const b = heroVisual.getBoundingClientRect();
           const x = (e.clientX - b.left) / b.width - 0.5;
           const y = (e.clientY - b.top) / b.height - 0.5;
-          heroImg.style.transform = `rotateY(${x * 14}deg) rotateX(${-y * 10}deg) scale(1.03)`;
+          heroImg.style.transform = `perspective(900px) rotateY(${x * 12}deg) rotateX(${-y * 8}deg) scale(1.03)`;
         });
         heroVisual.addEventListener("pointerleave", () => {
           heroImg.style.transform = "";
