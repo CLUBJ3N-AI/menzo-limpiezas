@@ -68,18 +68,21 @@
             </div>
           </div>
 
-          <div class="media-hero-visual">
+          <div class="media-hero-visual" id="heroVisual">
+            <div class="media-hero-glow"></div>
             <div class="media-hero-image">
               <img src="images/gallery-height-window.jpg" alt="Operario Menzo limpiando cristal en altura" />
+              <div class="media-hero-shimmer"></div>
             </div>
             <div class="media-hero-badge">
               <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16"><path d="M10 1.5l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.77l-4.78 2.51.91-5.32L2.27 7.12l5.34-.78L10 1.5z"/></svg>
               Servicio profesional certificado
             </div>
             <div class="media-hero-stat">
-              <strong>+500</strong>
+              <strong id="heroCount">0</strong>
               <span>trabajos realizados</span>
             </div>
+            <div class="media-hero-ping"></div>
           </div>
 
         </div>
@@ -237,6 +240,43 @@
     </dialog>
 
     <script>
+      // 3D tilt hero
+      const heroVisual = document.getElementById("heroVisual");
+      if (heroVisual) {
+        const heroImg = heroVisual.querySelector(".media-hero-image");
+        heroVisual.addEventListener("pointermove", (e) => {
+          const b = heroVisual.getBoundingClientRect();
+          const x = (e.clientX - b.left) / b.width - 0.5;
+          const y = (e.clientY - b.top) / b.height - 0.5;
+          heroImg.style.transform = `rotateY(${x * 14}deg) rotateX(${-y * 10}deg) scale(1.03)`;
+        });
+        heroVisual.addEventListener("pointerleave", () => {
+          heroImg.style.transform = "";
+        });
+      }
+
+      // Count-up animation
+      const heroCount = document.getElementById("heroCount");
+      if (heroCount) {
+        const target = 500;
+        const duration = 1800;
+        const start = performance.now();
+        const observer = new IntersectionObserver((entries) => {
+          if (entries[0].isIntersecting) {
+            observer.disconnect();
+            const tick = (now) => {
+              const elapsed = now - start;
+              const progress = Math.min(elapsed / duration, 1);
+              const eased = 1 - Math.pow(1 - progress, 3);
+              heroCount.textContent = "+" + Math.floor(eased * target);
+              if (progress < 1) requestAnimationFrame(tick);
+            };
+            requestAnimationFrame(tick);
+          }
+        }, { threshold: 0.4 });
+        observer.observe(heroCount);
+      }
+
       const mediaCards = Array.from(document.querySelectorAll(".media-shot"));
       const mediaLightbox = document.getElementById("media-lightbox");
       const mediaLightboxImage = document.getElementById("media-lightbox-image");
