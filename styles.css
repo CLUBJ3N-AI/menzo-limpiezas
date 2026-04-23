@@ -1486,6 +1486,32 @@ a {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   align-items: stretch;
 }
+.media-section-block {
+  margin-bottom: 3.5rem;
+}
+.media-section-label {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.media-section-label h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #102131;
+  margin: 0;
+}
+.media-section-pill {
+  background: #1fa2eb;
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.85rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
 
 .media-shot {
   position: relative;
