@@ -1502,22 +1502,6 @@ a {
   perspective: 900px;
   transform-style: preserve-3d;
 }
-.media-hero-glow {
-  position: absolute;
-  inset: -18px;
-  border-radius: 1.8rem;
-  background: conic-gradient(from 0deg, #1fa2eb, #0d5fa8, #1fa2eb, #7fd6ff, #1fa2eb);
-  background-size: 300% 300%;
-  animation: heroGlowSpin 4s linear infinite;
-  opacity: 0.55;
-  filter: blur(18px);
-  z-index: 0;
-}
-@keyframes heroGlowSpin {
-  0%   { transform: rotate(0deg) scale(1.05); }
-  50%  { transform: rotate(180deg) scale(1.08); }
-  100% { transform: rotate(360deg) scale(1.05); }
-}
 .media-hero-image {
   position: relative;
   z-index: 1;
