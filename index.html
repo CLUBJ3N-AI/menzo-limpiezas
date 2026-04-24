@@ -244,12 +244,12 @@
             <p class="google-review-quote">
               “Muy profesionales, puntuales y con resultados impecables. Totalmente recomendables.”
             </p>
-            <div class="google-review-rating" aria-label="Valoración 5 sobre 5">
-              <span>★★★★★</span>
-              <strong>5 / 5</strong>
+            <div class="google-review-rating" id="gr-rating-wrap" aria-label="Valoración 5 sobre 5">
+              <span id="gr-stars">★★★★★</span>
+              <strong id="gr-score">5 / 5</strong>
             </div>
-            <p class="google-review-meta">
-              Basado en 85 valoraciones públicas asociadas a Google Business.
+            <p class="google-review-meta" id="gr-meta">
+              Basado en <span id="gr-count">85</span> valoraciones públicas asociadas a Google Business.
             </p>
             <p class="google-review-author">
               Menzo Limpiezas
@@ -1127,6 +1127,69 @@
           }
         });
       }
+    </script>
+
+    <!-- Google Places API – actualiza valoraciones en tiempo real -->
+    <!-- INSTRUCCIONES:
+         1. Sustituye TU_API_KEY por tu clave de Google Maps (Places API activada)
+         2. Sustituye TU_PLACE_ID por el Place ID de tu ficha de Google
+            (encuéntralo en: https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder)
+         Una vez configurado, el número de reseñas y la nota se actualizarán solos. -->
+    <script>
+      (function () {
+        var API_KEY   = "TU_API_KEY";
+        var PLACE_ID  = "TU_PLACE_ID";
+
+        if (API_KEY === "TU_API_KEY" || PLACE_ID === "TU_PLACE_ID") return; // sin configurar
+
+        var script = document.createElement("script");
+        script.src =
+          "https://maps.googleapis.com/maps/api/js?key=" + API_KEY +
+          "&libraries=places&callback=_mzInitPlaces";
+        script.async = true;
+        script.defer = true;
+        document.head.appendChild(script);
+
+        window._mzInitPlaces = function () {
+          var dummy = document.createElement("div");
+          var svc   = new google.maps.places.PlacesService(dummy);
+          svc.getDetails(
+            { placeId: PLACE_ID, fields: ["rating", "user_ratings_total"] },
+            function (place, status) {
+              if (status !== google.maps.places.PlacesServiceStatus.OK) return;
+              var rating = place.rating;           // ej. 4.9
+              var total  = place.user_ratings_total; // ej. 97
+
+              var scoreEl = document.getElementById("gr-score");
+              var countEl = document.getElementById("gr-count");
+              var starsEl = document.getElementById("gr-stars");
+              var wrapEl  = document.getElementById("gr-rating-wrap");
+
+              if (scoreEl) scoreEl.textContent = rating.toFixed(1) + " / 5";
+              if (countEl) countEl.textContent = total;
+
+              if (starsEl) {
+                var full  = Math.round(rating);
+                starsEl.textContent = "★".repeat(full) + "☆".repeat(5 - full);
+              }
+              if (wrapEl) wrapEl.setAttribute("aria-label", "Valoración " + rating + " sobre 5");
+
+              // actualiza también el schema JSON-LD para SEO
+              var ldScript = document.querySelector('script[type="application/ld+json"]');
+              if (ldScript) {
+                try {
+                  var ld = JSON.parse(ldScript.textContent);
+                  if (ld.aggregateRating) {
+                    ld.aggregateRating.ratingValue = String(rating);
+                    ld.aggregateRating.reviewCount = String(total);
+                    ldScript.textContent = JSON.stringify(ld);
+                  }
+                } catch (e) {}
+              }
+            }
+          );
+        };
+      })();
     </script>
   </body>
 </html>
