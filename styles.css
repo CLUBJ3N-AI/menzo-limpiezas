@@ -2467,20 +2467,6 @@ a {
   filter: grayscale(0) opacity(1);
 }
 
-.partner-item--dark {
-  background: #0d1b2a;
-  border-radius: 10px;
-  padding: 6px 14px;
-}
-
-.partner-item--dark img {
-  filter: opacity(0.75);
-}
-
-.partner-item--dark:hover img {
-  filter: opacity(1);
-}
-
 /* ── Footer legal ── */
 .site-footer-legal {
   background: var(--dark, #0d1b2a);
