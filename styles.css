@@ -2437,7 +2437,7 @@ a {
 .partners-track {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 0;
   width: max-content;
   padding: 0 1.5rem;
   animation: marqueeSlide 38s linear infinite;
@@ -2448,16 +2448,16 @@ a {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  width: 160px;
   height: 60px;
+  padding: 0 20px;
   overflow: hidden;
 }
 
 .partner-item img {
   display: block;
-  height: 52px;
-  max-height: 52px;
-  width: auto;
-  max-width: 160px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
   filter: grayscale(1) opacity(0.55);
   transition: filter 0.3s ease;
