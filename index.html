@@ -90,9 +90,9 @@
   </head>
   <body>
     <div class="top-promo-bar">
-      <a href="multimedia-menzo.html" target="_blank" rel="noreferrer noopener">
+      <button type="button" id="dana-btn">
         Menzo Limpiezas con los afectados por la DANA
-      </a>
+      </button>
     </div>
 
     <header class="site-header">
@@ -222,6 +222,20 @@
             <img
               class="hero-image hero-media hero-image--detail"
               src="images/portada_4.png"
+              alt="Servicio de limpieza profesional Menzo Limpiezas"
+            />
+          </div>
+          <div class="hero-slide">
+            <img
+              class="hero-image hero-media hero-image--detail"
+              src="images/portada_6.jpeg"
+              alt="Servicio de limpieza profesional Menzo Limpiezas"
+            />
+          </div>
+          <div class="hero-slide">
+            <img
+              class="hero-image hero-media hero-image--detail"
+              src="images/portada_7.jpeg"
               alt="Servicio de limpieza profesional Menzo Limpiezas"
             />
           </div>
@@ -384,7 +398,7 @@
 
           <article class="showcase-item">
             <div class="showcase-image">
-              <img src="https://menzolimpieza.wordpress.com/wp-content/uploads/2026/01/limpieza-con-hidrolimpiadora-1.png?w=819" alt="Limpieza con hidrolimpiadora" />
+              <img src="images/LIMPIEZA CON HIDROLIMPIADORA.png" alt="Limpieza con hidrolimpiadora" style="object-position: left center; object-fit: cover;" />
             </div>
             <div class="showcase-copy">
               <h2>Limpieza con hidrolimpiadora</h2>
@@ -575,6 +589,8 @@
             <div class="partner-item"><img src="images/logo-karcher.png" alt="Kärcher" /></div>
             <div class="partner-item"><img src="images/logo-ionic-systems.png" alt="Ionic Systems" /></div>
             <div class="partner-item"><img src="images/logo-blackbolt.png.png" alt="Blackbolt" /></div>
+            <div class="partner-item"><img src="images/logo-bissell.png" alt="BISSELL" /></div>
+            <div class="partner-item"><img src="images/logo-abrasivos-aguila.png" alt="Abrasivos Aguila" /></div>
             <div class="partner-item" aria-hidden="true"><img src="images/logo-xativa.jpg" alt="" /></div>
             <div class="partner-item" aria-hidden="true"><img src="images/logo-adexa.png" alt="" /></div>
             <div class="partner-item" aria-hidden="true"><img src="images/logo-afelin.png" alt="" /></div>
@@ -585,6 +601,8 @@
             <div class="partner-item" aria-hidden="true"><img src="images/logo-karcher.png" alt="" /></div>
             <div class="partner-item" aria-hidden="true"><img src="images/logo-ionic-systems.png" alt="" /></div>
             <div class="partner-item" aria-hidden="true"><img src="images/logo-blackbolt.png.png" alt="" /></div>
+            <div class="partner-item" aria-hidden="true"><img src="images/logo-bissell.png" alt="" /></div>
+            <div class="partner-item" aria-hidden="true"><img src="images/logo-abrasivos-aguila.png" alt="" /></div>
           </div>
         </div>
       </section>
@@ -1239,6 +1257,194 @@
             }
           );
         };
+      })();
+    </script>
+
+    <!-- Modal DANA -->
+    <div class="dana-overlay" id="dana-overlay" role="dialog" aria-modal="true" aria-label="DANA – Menzo Limpiezas" hidden>
+      <div class="dana-modal">
+        <button class="dana-close" id="dana-close" aria-label="Cerrar">&times;</button>
+
+        <div class="dana-header">
+          <div class="dana-header-top">
+            <span class="dana-badge">DANA · Noviembre 2024</span>
+          </div>
+          <h2>Con los afectados por la DANA</h2>
+          <p>Nuestro equipo se desplazó para ayudar a los vecinos afectados por las devastadoras inundaciones. Días de trabajo sin descanso y sin coste para los damnificados.</p>
+        </div>
+
+        <div class="dana-gallery-grid" id="dana-gallery">
+
+          <button class="dana-media-btn" data-type="video" data-src="images/dana1.mp4" data-caption="Trabajos de limpieza DANA – Vídeo 1">
+            <video class="dana-thumb-video" muted playsinline preload="metadata"><source src="images/dana1.mp4" type="video/mp4" /></video>
+            <div class="dana-card-overlay">
+              <span class="dana-card-num">01</span>
+              <div class="dana-play-wrap">
+                <div class="dana-play-ring"></div>
+                <div class="dana-play-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <span class="dana-card-title">Vídeo 1</span>
+            </div>
+          </button>
+
+          <button class="dana-media-btn" data-type="video" data-src="images/dana2.mp4" data-caption="Trabajos de limpieza DANA – Vídeo 2">
+            <video class="dana-thumb-video" muted playsinline preload="metadata"><source src="images/dana2.mp4" type="video/mp4" /></video>
+            <div class="dana-card-overlay">
+              <span class="dana-card-num">02</span>
+              <div class="dana-play-wrap">
+                <div class="dana-play-ring"></div>
+                <div class="dana-play-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <span class="dana-card-title">Vídeo 2</span>
+            </div>
+          </button>
+
+          <button class="dana-media-btn" data-type="video" data-src="images/dana3.mp4" data-caption="Trabajos de limpieza DANA – Vídeo 3">
+            <video class="dana-thumb-video" muted playsinline preload="metadata"><source src="images/dana3.mp4" type="video/mp4" /></video>
+            <div class="dana-card-overlay">
+              <span class="dana-card-num">03</span>
+              <div class="dana-play-wrap">
+                <div class="dana-play-ring"></div>
+                <div class="dana-play-icon">
+                  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26"><path d="M8 5v14l11-7z"/></svg>
+                </div>
+              </div>
+              <span class="dana-card-title">Vídeo 3</span>
+            </div>
+          </button>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Lightbox DANA -->
+    <div class="dana-lightbox" id="dana-lightbox" hidden>
+      <button class="dana-lb-close" id="dana-lb-close" aria-label="Cerrar">&times;</button>
+      <button class="dana-lb-arrow dana-lb-prev" id="dana-lb-prev" aria-label="Anterior">&#8249;</button>
+      <div class="dana-lb-content">
+        <img class="dana-lb-img" id="dana-lb-img" src="" alt="" />
+        <video class="dana-lb-video" id="dana-lb-video" controls playsinline></video>
+        <p class="dana-lb-caption" id="dana-lb-caption"></p>
+      </div>
+      <button class="dana-lb-arrow dana-lb-next" id="dana-lb-next" aria-label="Siguiente">&#8250;</button>
+    </div>
+
+    <script>
+      (function () {
+        var overlay  = document.getElementById('dana-overlay');
+        var danaBtn  = document.getElementById('dana-btn');
+        var closeBtn = document.getElementById('dana-close');
+        var lightbox = document.getElementById('dana-lightbox');
+        var lbImg    = document.getElementById('dana-lb-img');
+        var lbVideo  = document.getElementById('dana-lb-video');
+        var lbCaption = document.getElementById('dana-lb-caption');
+        var lbClose  = document.getElementById('dana-lb-close');
+        var lbPrev   = document.getElementById('dana-lb-prev');
+        var lbNext   = document.getElementById('dana-lb-next');
+        var mediaList = [];
+        var currentIdx = 0;
+
+        function buildMediaList() {
+          var btns = document.querySelectorAll('.dana-media-btn');
+          mediaList = Array.prototype.map.call(btns, function (b) {
+            return { type: b.dataset.type, src: b.dataset.src, caption: b.dataset.caption };
+          });
+        }
+
+        function openModal() {
+          overlay.hidden = false;
+          document.body.style.overflow = 'hidden';
+          closeBtn.focus();
+        }
+
+        function closeModal() {
+          overlay.hidden = true;
+          document.body.style.overflow = '';
+        }
+
+        function showMedia(idx) {
+          var item = mediaList[idx];
+          lbCaption.textContent = item.caption;
+          if (item.type === 'video') {
+            lbImg.style.display = 'none';
+            lbVideo.style.display = 'block';
+            lbVideo.src = item.src;
+            lbVideo.play().catch(function () {});
+          } else {
+            lbVideo.pause();
+            lbVideo.src = '';
+            lbVideo.style.display = 'none';
+            lbImg.style.display = 'block';
+            lbImg.src = item.src;
+            lbImg.alt = item.caption;
+          }
+        }
+
+        function openLightbox(idx) {
+          currentIdx = idx;
+          showMedia(idx);
+          lightbox.hidden = false;
+          lbClose.focus();
+        }
+
+        function closeLightbox() {
+          lightbox.hidden = true;
+          lbVideo.pause();
+          lbVideo.src = '';
+          lbImg.src = '';
+        }
+
+        function showPrev() {
+          lbVideo.pause();
+          currentIdx = (currentIdx - 1 + mediaList.length) % mediaList.length;
+          showMedia(currentIdx);
+        }
+
+        function showNext() {
+          lbVideo.pause();
+          currentIdx = (currentIdx + 1) % mediaList.length;
+          showMedia(currentIdx);
+        }
+
+        buildMediaList();
+
+        danaBtn.addEventListener('click', openModal);
+        closeBtn.addEventListener('click', closeModal);
+        overlay.addEventListener('click', function (e) {
+          if (e.target === overlay) closeModal();
+        });
+
+        document.querySelectorAll('.dana-media-btn').forEach(function (btn, i) {
+          btn.addEventListener('click', function () { openLightbox(i); });
+          var thumbVid = btn.querySelector('.dana-thumb-video');
+          if (thumbVid) {
+            btn.addEventListener('mouseenter', function () { thumbVid.play().catch(function () {}); });
+            btn.addEventListener('mouseleave', function () { thumbVid.pause(); thumbVid.currentTime = 0; });
+          }
+        });
+
+        lbClose.addEventListener('click', closeLightbox);
+        lbPrev.addEventListener('click', showPrev);
+        lbNext.addEventListener('click', showNext);
+
+        lightbox.addEventListener('click', function (e) {
+          if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape') {
+            if (!lightbox.hidden) closeLightbox();
+            else if (!overlay.hidden) closeModal();
+          }
+          if (!lightbox.hidden) {
+            if (e.key === 'ArrowLeft') showPrev();
+            if (e.key === 'ArrowRight') showNext();
+          }
+        });
       })();
     </script>
   </body>
