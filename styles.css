@@ -2180,7 +2180,7 @@ a {
   }
 
   .hero-content-overlay {
-    left: 3.8rem;
+    left: 3.2rem;
     right: 1rem;
   }
 
@@ -2917,4 +2917,263 @@ a {
 }
 @media (max-width: 480px) {
   .dana-gallery-grid { grid-template-rows: repeat(3, 175px); }
+}
+
+/* ════════════════════════════════════════════════════
+   MOBILE GLOBAL – correcciones < 640px y < 480px
+   ════════════════════════════════════════════════════ */
+
+/* ── Top promo bar ── */
+@media (max-width: 640px) {
+  .top-promo-bar {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.78rem;
+  }
+  .top-promo-bar button {
+    font-size: 0.78rem;
+  }
+}
+
+/* ── Hero ── */
+@media (max-width: 480px) {
+  .hero-stage {
+    height: 52vh;
+    min-height: 320px;
+  }
+  .hero-content-overlay {
+    left: 1rem;
+    right: 1rem;
+    bottom: 2rem;
+  }
+  .hero-content-overlay h1 {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    max-width: 100%;
+  }
+  .hero-text {
+    font-size: 0.82rem;
+    max-width: 100%;
+  }
+  .hero-kicker {
+    font-size: 0.62rem;
+  }
+  .hero-cta {
+    font-size: 0.82rem;
+    padding: 0.65rem 1.2rem;
+  }
+  .hero-arrow-edge {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+  .hero-arrow-prev.hero-arrow-edge { left: 0.4rem; }
+  .hero-arrow-next.hero-arrow-edge { right: 0.4rem; }
+}
+
+/* ── Servicios marquee ── */
+@media (max-width: 480px) {
+  .marquee-track {
+    animation-duration: 22s;
+  }
+  .marquee-track span {
+    font-size: 0.78rem;
+    padding: 0 1.2rem;
+  }
+}
+
+/* ── Google reviews / valoraciones ── */
+@media (max-width: 480px) {
+  .google-reviews-section {
+    padding: 2rem 0;
+  }
+  .google-reviews-layout {
+    gap: 1.5rem;
+  }
+  .google-review-card {
+    padding: 1.2rem;
+  }
+}
+
+/* ── Showcase servicios ── */
+@media (max-width: 480px) {
+  .showcase-image img {
+    min-height: 200px;
+    border-radius: 1rem;
+  }
+  .showcase-copy {
+    padding: 1.2rem 0;
+  }
+  .showcase-copy h2 {
+    font-size: clamp(1.2rem, 5.5vw, 1.5rem);
+  }
+  .review-card {
+    padding: 0.9rem 1rem;
+    font-size: 0.82rem;
+  }
+  .review-card-avatar {
+    width: 34px;
+    height: 34px;
+    font-size: 0.75rem;
+  }
+}
+
+/* ── Partners marquee ── */
+@media (max-width: 640px) {
+  .partner-item {
+    width: 120px;
+    height: 50px;
+    padding: 0 12px;
+  }
+  .partners-track {
+    animation-duration: 28s;
+  }
+}
+
+/* ── Carrusel reseñas ── */
+@media (max-width: 480px) {
+  .verified-reviews-section {
+    padding: 2.5rem 0;
+  }
+  .verified-review-card {
+    padding: 1.1rem 1.2rem;
+  }
+  .verified-review-card p {
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+  .reviews-carousel-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1rem;
+  }
+}
+
+/* ── Formulario presupuesto ── */
+@media (max-width: 480px) {
+  .quote-section {
+    padding: 2.5rem 0;
+  }
+  .quote-copy h2 {
+    font-size: clamp(1.6rem, 7vw, 2.2rem);
+  }
+  .quote-form label {
+    font-size: 0.85rem;
+  }
+  .quote-form input,
+  .quote-form textarea {
+    font-size: 0.9rem;
+    padding: 0.75rem 0.85rem;
+  }
+  .submit-button {
+    font-size: 0.9rem;
+    padding: 0.85rem 1.2rem;
+  }
+}
+
+/* ── Modal Sobre nosotros ── */
+@media (max-width: 480px) {
+  .modal-overlay {
+    padding: 0.75rem;
+    align-items: flex-end;
+  }
+  .modal-panel {
+    border-radius: 20px 20px 0 0;
+    max-height: 88vh;
+  }
+  .modal-header-band {
+    padding: 1.2rem;
+    gap: 0.9rem;
+  }
+  .modal-logo {
+    width: 56px;
+    height: 56px;
+  }
+  .modal-header-copy h2 {
+    font-size: 1.15rem;
+  }
+  .modal-body {
+    padding: 1rem 1.2rem 1.4rem;
+  }
+  .modal-points p {
+    font-size: 0.85rem;
+  }
+  .modal-cta {
+    padding: 0.6rem 1.1rem;
+    font-size: 0.82rem;
+  }
+}
+
+/* ── Footer CTA ── */
+@media (max-width: 480px) {
+  .footer-cta-bar {
+    gap: 1.2rem;
+    padding: 1.8rem 0;
+  }
+  .footer-cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .cta-button {
+    text-align: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* ── Footer mapa y columnas ── */
+@media (max-width: 480px) {
+  .footer-column h3 {
+    font-size: 1.1rem;
+  }
+  .footer-column a,
+  .footer-column p {
+    font-size: 0.85rem;
+  }
+  .map-card iframe {
+    height: 220px;
+  }
+  .map-card-header h3 {
+    font-size: 1rem;
+  }
+  .footer-legal-inner {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .footer-legal-links {
+    flex-direction: column;
+    gap: 0.4rem;
+    align-items: center;
+  }
+}
+
+/* ── Sección multimedia (mobile) ── */
+@media (max-width: 480px) {
+  .media-shot,
+  .media-shot-wide,
+  .media-shot-tall {
+    min-height: 220px;
+  }
+  .media-section-block {
+    padding: 1.2rem 0;
+  }
+  .media-filter-pills {
+    gap: 0.5rem;
+  }
+  .media-filter-pill {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.75rem;
+  }
+}
+
+/* ── Evitar scroll horizontal global ── */
+@media (max-width: 640px) {
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  .container {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
 }
