@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Solicitud enviada | Menzo Limpiezas</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/jpeg" href="images/logo-menzo-interactivo.jpg" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body { background: #f7fbff; display: flex; flex-direction: column; min-height: 100vh; }
+      .thanks-wrap {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 4rem 1.5rem;
+      }
+      .thanks-icon { font-size: 4rem; margin-bottom: 1.25rem; }
+      .thanks-wrap h1 {
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        color: #102131;
+        margin-bottom: 0.75rem;
+      }
+      .thanks-wrap p {
+        color: #4a5568;
+        font-size: 1rem;
+        max-width: 420px;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+      }
+      .thanks-btn {
+        display: inline-block;
+        background: linear-gradient(135deg, #1fa2eb, #0d6ebd);
+        color: #fff;
+        font-weight: 700;
+        font-size: 1rem;
+        padding: 0.85rem 2rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        transition: opacity 0.2s;
+      }
+      .thanks-btn:hover { opacity: 0.88; }
+    </style>
+  </head>
+  <body>
+    <header class="site-header jobs-header">
+      <div class="container header-bar">
+        <a class="brand" href="index.html">
+          <img src="images/66810-OCQAXA-424-copia.jpg" alt="Logo Menzo Limpiezas" class="brand-logo" />
+          <span>Menzo Limpiezas</span>
+        </a>
+        <button class="nav-hamburger" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" aria-label="Principal">
+          <a href="index.html">Inicio</a>
+          <a href="multimedia-menzo.html">Multimedia</a>
+          <a href="index.html#resenas">Reseñas</a>
+          <a href="index.html#presupuesto">Presupuesto</a>
+          <a href="trabaja-con-nosotros.html">Trabaja con nosotros</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="thanks-wrap">
+      <div class="thanks-icon">✅</div>
+      <h1>¡Solicitud enviada correctamente!</h1>
+      <p>Hemos recibido tu mensaje. Nos pondremos en contacto contigo lo antes posible.</p>
+      <a href="index.html" class="thanks-btn">Volver al inicio</a>
+    </main>
+
+    <footer class="site-footer-legal">
+      <div class="container footer-legal-inner">
+        <div class="footer-legal-links">
+          <a href="politica-de-privacidad.html">Política de privacidad</a>
+          <a href="terminos-y-condiciones.html">Términos y condiciones</a>
+        </div>
+        <p class="footer-legal-copy">
+          Copyright &copy; 2026 &ndash; Menzo Limpiezas S.L. &mdash; Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.getElementById("navToggle");
+      const header = document.querySelector(".site-header");
+      if (navToggle && header) {
+        navToggle.addEventListener("click", () => {
+          const open = header.classList.toggle("nav-open");
+          navToggle.setAttribute("aria-expanded", open);
+        });
+        document.addEventListener("click", (e) => {
+          if (!header.contains(e.target)) {
+            header.classList.remove("nav-open");
+            navToggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
