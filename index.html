@@ -760,12 +760,7 @@
             </div>
           </div>
 
-          <form class="quote-form" action="https://formsubmit.co/menzosl_vlc@hotmail.com" method="POST">
-            <input type="hidden" name="_subject" value="Nueva solicitud de presupuesto – Menzo Limpiezas" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_next" value="https://menzolimpiezas.com" />
-
+          <form class="quote-form" id="quote-form">
             <label for="nombre">Nombre <span>*</span></label>
             <input id="nombre" name="nombre" type="text" required />
 
@@ -791,8 +786,14 @@
               <span>Consiento recibir comunicaciones comerciales sobre ofertas, productos y servicios.</span>
             </label>
 
-            <button class="submit-button" type="submit">Enviar solicitud</button>
+            <button class="submit-button" type="submit" id="quote-submit-btn">Enviar solicitud</button>
           </form>
+
+          <div id="quote-success" style="display:none; text-align:center; padding: 2.5rem 1rem;">
+            <div style="font-size:3rem; margin-bottom:1rem;">✅</div>
+            <h3 style="color:#102131; font-size:1.3rem; margin-bottom:0.5rem;">¡Solicitud enviada correctamente!</h3>
+            <p style="color:#4a5568; font-size:0.95rem;">Nos pondremos en contacto contigo lo antes posible.</p>
+          </div>
         </div>
       </section>
 
@@ -1200,6 +1201,42 @@
           }
         });
       }
+    </script>
+
+    <script>
+      (function () {
+        var form = document.getElementById("quote-form");
+        var success = document.getElementById("quote-success");
+        var btn = document.getElementById("quote-submit-btn");
+        if (!form) return;
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          btn.disabled = true;
+          btn.textContent = "Enviando...";
+
+          var data = new FormData(form);
+          data.append("_subject", "Nueva solicitud de presupuesto – Menzo Limpiezas");
+          data.append("_template", "table");
+          data.append("_captcha", "false");
+
+          fetch("https://formsubmit.co/ajax/menzosl_vlc@hotmail.com", {
+            method: "POST",
+            headers: { "Accept": "application/json" },
+            body: data
+          })
+          .then(function (res) { return res.json(); })
+          .then(function () {
+            form.style.display = "none";
+            success.style.display = "block";
+          })
+          .catch(function () {
+            btn.disabled = false;
+            btn.textContent = "Enviar solicitud";
+            alert("Ha ocurrido un error. Por favor inténtalo de nuevo.");
+          });
+        });
+      })();
     </script>
 
     <!-- Google Places API – actualiza valoraciones en tiempo real -->
