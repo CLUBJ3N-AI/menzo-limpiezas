@@ -1208,42 +1208,6 @@
       }
     </script>
 
-    <script>
-      (function () {
-        var form = document.getElementById("quote-form");
-        var success = document.getElementById("quote-success");
-        var btn = document.getElementById("quote-submit-btn");
-        if (!form) return;
-
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          btn.disabled = true;
-          btn.textContent = "Enviando...";
-
-          var data = new FormData(form);
-          data.append("_subject", "Nueva solicitud de presupuesto – Menzo Limpiezas");
-          data.append("_template", "table");
-          data.append("_captcha", "false");
-
-          fetch("https://formsubmit.co/ajax/menzosl_vlc@hotmail.com", {
-            method: "POST",
-            headers: { "Accept": "application/json" },
-            body: data
-          })
-          .then(function (res) { return res.json(); })
-          .then(function () {
-            form.style.display = "none";
-            success.style.display = "block";
-          })
-          .catch(function () {
-            btn.disabled = false;
-            btn.textContent = "Enviar solicitud";
-            alert("Ha ocurrido un error. Por favor inténtalo de nuevo.");
-          });
-        });
-      })();
-    </script>
-
     <!-- Google Places API – actualiza valoraciones en tiempo real -->
     <!-- INSTRUCCIONES:
          1. Sustituye TU_API_KEY por tu clave de Google Maps (Places API activada)
