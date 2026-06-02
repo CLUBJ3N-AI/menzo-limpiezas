@@ -1904,6 +1904,7 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.55rem;
   min-height: 52px;
   padding: 0.85rem 1.6rem;
   border-radius: 999px;
@@ -1929,37 +1930,94 @@ a {
 }
 
 .footer-map-section {
-  padding: 3rem 0 0;
+  padding: 2.5rem 0;
   background: #ffffff;
 }
 
-.footer-map-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.92fr);
-  gap: 2rem;
-  align-items: start;
+.footer-wide-container {
+  width: min(1520px, calc(100% - 3rem));
+  margin: 0 auto;
 }
 
-.footer-columns {
+/* 6 columnas: Sobre nosotros | Xàtiva info | Mapa | Mapa | Dénia info | Servicios */
+.footer-maps-row {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
+  grid-template-columns:
+    minmax(145px, 0.36fr)
+    minmax(195px, 0.5fr)
+    1fr
+    1fr
+    minmax(195px, 0.5fr)
+    minmax(145px, 0.36fr);
+  gap: 1.25rem;
+  align-items: stretch;
 }
 
-.footer-column h3 {
+/* Columnas laterales — misma tarjeta que los mapas */
+.footer-side-col {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  border-radius: 1.7rem;
+  background: #f6f9fc;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.footer-side-title {
   margin: 0 0 1rem;
-  font-size: 1.5rem;
-}
-
-.footer-column a,
-.footer-column p {
-  display: block;
-  margin: 0 0 0.65rem;
+  font-size: 0.95rem;
+  font-weight: 700;
   color: var(--text);
-  text-decoration: none;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+  white-space: nowrap;
 }
 
-.footer-column a:hover {
+.footer-side-link {
+  display: block;
+  padding: 0.25rem 0;
+  color: var(--text);
+  font-size: 0.83rem;
+  text-decoration: none;
+  line-height: 1.4;
+  transition: color 0.2s;
+}
+
+.footer-side-link:hover {
+  color: var(--primary);
+}
+
+.footer-side-divider {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 0.9rem 0;
+}
+
+.footer-side-p {
+  margin: 0 0 0.45rem;
+  color: var(--text);
+  font-size: 0.83rem;
+  line-height: 1.4;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.sede-badge {
+  display: inline-block;
+  padding: 0.22rem 0.85rem;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 2rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  align-self: flex-start;
+}
+
+.sede-phone {
+  font-weight: 700;
   color: var(--primary);
 }
 
@@ -1992,9 +2050,15 @@ a {
 
 .map-card iframe {
   width: 100%;
-  height: 320px;
+  height: 260px;
   border: 0;
   border-radius: 1.2rem;
+}
+
+.map-card-info {
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line);
+  margin-top: 0.9rem;
 }
 
 @media (max-width: 900px) {
@@ -2097,7 +2161,6 @@ a {
   }
 
   .footer-cta-bar,
-  .footer-map-layout,
   .quote-layout,
   .jobs-form-layout,
   .media-hero-layout {
@@ -2105,7 +2168,8 @@ a {
     display: grid;
   }
 
-  .footer-columns {
+
+  .footer-maps-row {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -2237,7 +2301,7 @@ a {
     border-radius: 1.35rem;
   }
 
-  .footer-columns {
+  .footer-maps-row {
     grid-template-columns: 1fr;
   }
 
