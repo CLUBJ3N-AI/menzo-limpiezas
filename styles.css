@@ -235,6 +235,58 @@ a {
   color: #fff;
 }
 
+/* Centro del header: nav + iconos sociales con colores de marca */
+.nav-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header-socials-center {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.soc-btn {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.2s, opacity 0.2s;
+  flex-shrink: 0;
+}
+
+.soc-btn svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.soc-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+.soc-instagram {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.soc-whatsapp  { background: #25D366; }
+.soc-email     { background: #0078D4; }
+.soc-facebook  { background: #1877F2; }
+.soc-tiktok    { background: #010101; }
+
+.footer-cta-socials {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
 .header-socials svg {
   width: 1.1rem;
   height: 1.1rem;
